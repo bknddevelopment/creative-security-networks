@@ -10,67 +10,83 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#0056D2",
-          dark: "#003A8C",
-          light: "#4A90E2",
-          pale: "#E6F0FF",
+        // Platinum Collection - Main neutral palette
+        platinum: {
+          50: "#FAFBFC",   // Lightest platinum
+          100: "#F4F5F7",  // Light platinum
+          200: "#E5E7EB",  // Soft platinum
+          300: "#D1D5DB",  // Medium platinum
+          400: "#9CA3AF",  // Dark platinum
+          500: "#6B7280",  // Darker platinum
+          600: "#4B5563",  // Deep platinum
+          700: "#374151",  // Deeper platinum
+          800: "#1F2937",  // Almost black platinum
+          900: "#111827",  // Darkest platinum
         },
+        // Royal Blue Collection - Trust and security
+        royal: {
+          50: "#EBF3FF",   // Lightest blue
+          100: "#D6E7FF",  // Very light blue
+          200: "#ADC9FF",  // Light blue
+          300: "#84ABFF",  // Sky blue
+          400: "#5B8DFF",  // Medium blue
+          500: "#0052CC",  // Primary blue (Cobalt)
+          600: "#003D82",  // Royal blue
+          700: "#002855",  // Deep navy
+          800: "#001A3D",  // Darker navy
+          900: "#000D1F",  // Darkest navy
+        },
+        // Brown Collection - Warmth and luxury
+        espresso: {
+          50: "#FFF8F3",   // Cream
+          100: "#F7E9DC",  // Light taupe
+          200: "#E8D4C1",  // Warm beige
+          300: "#D4B5A0",  // Taupe
+          400: "#B89680",  // Medium brown
+          500: "#8B6F47",  // Walnut
+          600: "#6B5333",  // Dark walnut
+          700: "#4A3826",  // Deep brown
+          800: "#3E2723",  // Espresso
+          900: "#2C1810",  // Darkest brown
+        },
+        // Accent Colors
         accent: {
-          teal: "#00BFA6",
-          orange: "#FF6B35",
-          purple: "#7B3FF2",
+          gold: "#D4AF37",      // Luxury gold
+          success: "#059669",   // Forest green
+          warning: "#D97706",   // Amber
+          danger: "#DC2626",    // Professional red
         },
-        gray: {
-          900: "#1A1A1A",
-          800: "#2D2D2D",
-          700: "#404040",
-          600: "#595959",
-          500: "#737373",
-          400: "#A6A6A6",
-          300: "#D9D9D9",
-          200: "#E6E6E6",
-          100: "#F5F5F5",
-          50: "#FAFAFA",
-        },
-        semantic: {
-          success: "#10B981",
-          warning: "#F59E0B",
-          danger: "#EF4444",
-          info: "#3B82F6",
+        // Backgrounds
+        background: {
+          primary: "#FAFBFC",    // Main background
+          secondary: "#F4F5F7",  // Section backgrounds
+          card: "#FFFFFF",       // Card backgrounds
+          overlay: "rgba(0, 0, 0, 0.5)", // Modal overlays
         },
       },
       fontFamily: {
-        display: ["Poppins", "Inter", "system-ui", "sans-serif"],
+        display: ["Playfair Display", "Georgia", "serif"],
+        heading: ["IBM Plex Sans", "system-ui", "sans-serif"],
         body: ["Inter", "-apple-system", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "Consolas", "monospace"],
+        mono: ["IBM Plex Mono", "Consolas", "monospace"],
       },
       fontSize: {
-        xs: ["0.75rem", { lineHeight: "1rem" }],
-        sm: ["0.875rem", { lineHeight: "1.25rem" }],
-        base: ["1rem", { lineHeight: "1.5rem" }],
-        lg: ["1.125rem", { lineHeight: "1.75rem" }],
-        xl: ["1.25rem", { lineHeight: "1.75rem" }],
-        "2xl": ["1.5rem", { lineHeight: "2rem" }],
-        "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
-        "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
-        "5xl": ["3rem", { lineHeight: "1" }],
-        "6xl": ["3.75rem", { lineHeight: "1" }],
-        "7xl": ["4.5rem", { lineHeight: "1" }],
+        "display-xl": ["4.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        "display-lg": ["3.75rem", { lineHeight: "1.2", letterSpacing: "-0.02em" }],
+        "display-md": ["3rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        "display-sm": ["2.25rem", { lineHeight: "1.3", letterSpacing: "-0.01em" }],
       },
-      spacing: {
-        18: "4.5rem",
-        88: "22rem",
-        120: "30rem",
+      backgroundImage: {
+        'gradient-platinum': 'linear-gradient(135deg, #F4F5F7 0%, #E5E7EB 100%)',
+        'gradient-luxury': 'linear-gradient(135deg, #003D82 0%, #3E2723 100%)',
+        'gradient-radial-light': 'radial-gradient(ellipse at top, #EBF3FF, #FAFBFC)',
+        'texture-platinum': "url('/images/brushed-platinum.png')",
       },
       animation: {
-        "fade-in": "fadeIn 0.5s ease-in-out",
-        "fade-in-up": "fadeInUp 0.5s ease-out",
-        "slide-in-left": "slideInLeft 0.3s ease-out",
-        "slide-in-right": "slideInRight 0.3s ease-out",
-        spin: "spin 1s linear infinite",
-        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        bounce: "bounce 1s infinite",
+        "fade-in": "fadeIn 0.8s ease-in-out",
+        "fade-in-up": "fadeInUp 0.8s ease-out",
+        "slide-in": "slideIn 0.5s ease-out",
+        "scale-in": "scaleIn 0.5s ease-out",
       },
       keyframes: {
         fadeIn: {
@@ -81,26 +97,23 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        slideInLeft: {
+        slideIn: {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0)" },
         },
-        slideInRight: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0)" },
+        scaleIn: {
+          "0%": { transform: "scale(0.9)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
         },
       },
       boxShadow: {
-        xs: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-        sm: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-        base: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-        md: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        lg: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-        xl: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-        "2xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
-        "primary": "0 10px 40px -10px rgba(0, 86, 210, 0.35)",
-        "success": "0 10px 40px -10px rgba(16, 185, 129, 0.35)",
-        "danger": "0 10px 40px -10px rgba(239, 68, 68, 0.35)",
+        'luxury': '0 10px 40px -10px rgba(0, 61, 130, 0.15)',
+        'luxury-lg': '0 20px 60px -15px rgba(0, 61, 130, 0.2)',
+        'card': '0 4px 20px rgba(0, 0, 0, 0.08)',
+        'card-hover': '0 8px 30px rgba(0, 0, 0, 0.12)',
+      },
+      borderRadius: {
+        'luxury': '0.75rem',
       },
     },
   },
