@@ -50,9 +50,9 @@ export default function HeroPremium() {
             {/* Value Props */}
             <div className="space-y-3 mb-10">
               {[
-                "90-Second Response Guarantee",
+                "1-2 Hour Response Guarantee",
                 "24/7 Professional Monitoring",
-                "100% Wireless Technology"
+                "Cutting-Edge Network Technology"
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -125,7 +125,7 @@ export default function HeroPremium() {
                   <div className="text-sm text-platinum-600">Protected</div>
                 </div>
                 <div className="text-center p-4 bg-royal-50 rounded-lg">
-                  <div className="font-display text-3xl text-royal-600 mb-1">&lt;90s</div>
+                  <div className="font-display text-3xl text-royal-600 mb-1">1-2h</div>
                   <div className="text-sm text-platinum-600">Response</div>
                 </div>
                 <div className="text-center p-4 bg-platinum-50 rounded-lg">
@@ -136,9 +136,9 @@ export default function HeroPremium() {
 
               {/* Certifications */}
               <div className="mt-8 pt-8 border-t border-platinum-200">
-                <p className="text-xs text-platinum-500 text-center mb-4">CERTIFIED & COMPLIANT</p>
+                <p className="text-xs text-platinum-500 text-center mb-4">TECHNOLOGY & STANDARDS</p>
                 <div className="flex justify-center gap-6">
-                  {["UL Listed", "ISO 27001", "SOC 2"].map((cert) => (
+                  {["UL Listed Equipment", "Advanced Encryption", "Network Security"].map((cert) => (
                     <div key={cert} className="text-xs font-mono text-platinum-600">
                       {cert}
                     </div>

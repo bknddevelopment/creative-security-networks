@@ -26,8 +26,8 @@ const guarantees = [
   {
     icon: Lock,
     title: "Military Grade",
-    description: "NSA-approved encryption standards",
-    badge: "CERTIFIED"
+    description: "Advanced encryption protocols for maximum protection",
+    badge: "COMMITTED"
   }
 ];
 
@@ -111,9 +111,9 @@ export default function SecurityGuarantee() {
           transition={{ delay: 0.5 }}
           className="mt-16 text-center"
         >
-          <p className="text-gray-500 mb-6">Trusted by Industry Leaders</p>
+          <p className="text-gray-500 mb-6">Security Standards We Follow</p>
           <div className="flex flex-wrap justify-center gap-8">
-            {["ISO 27001", "SOC 2", "GDPR", "HIPAA", "PCI DSS"].map((cert) => (
+            {["AES-256 Encryption", "TLS 1.3", "Zero-Trust Architecture", "Data Privacy", "Secure Networks"].map((cert) => (
               <div key={cert} className="px-4 py-2 bg-glass-white backdrop-blur-sm border border-gray-700 rounded-lg">
                 <span className="text-gray-400 font-mono text-sm">{cert}</span>
               </div>

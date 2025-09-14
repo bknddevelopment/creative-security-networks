@@ -17,7 +17,7 @@ export default function TrustIndicators() {
             Why Choose Creative Security Networks
           </h2>
           <p className="text-xl text-platinum-600 max-w-3xl mx-auto">
-            Industry-leading security backed by certifications, guarantees, and unwavering commitment
+            Industry-leading security technology backed by proven practices and unwavering commitment
           </p>
         </motion.div>
 
@@ -25,7 +25,7 @@ export default function TrustIndicators() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-16">
           {[
             { icon: Shield, label: "Licensed & Insured", value: "Full Coverage" },
-            { icon: Clock, label: "Response Time", value: "< 90 Seconds" },
+            { icon: Clock, label: "Response Time", value: "1-2 Hours" },
             { icon: Award, label: "Industry Certified", value: "UL Listed" },
             { icon: Users, label: "Expert Technicians", value: "15+ Years Exp" }
           ].map((item, index) => {
@@ -52,16 +52,16 @@ export default function TrustIndicators() {
         {/* Certification Section */}
         <div className="bg-gradient-platinum rounded-luxury p-12">
           <h3 className="font-heading text-2xl text-center text-platinum-800 mb-8">
-            Certifications & Compliance
+            Our Security Standards
           </h3>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {[
-              "ISO 27001", 
-              "SOC 2 Type II", 
-              "UL 681 Listed", 
-              "GDPR Compliant",
-              "HIPAA Compliant"
+              "End-to-End Encryption",
+              "24/7 Monitoring",
+              "UL Listed Equipment",
+              "Privacy First Design",
+              "Regular Security Audits"
             ].map((cert, index) => (
               <motion.div
                 key={index}
